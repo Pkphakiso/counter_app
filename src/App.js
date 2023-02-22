@@ -14,7 +14,7 @@ class App extends Component {
         {id:2, value:0},
         {id:3, value:0},
         {id:4, value:0}
-    ]
+    ] 
   }; 
 
   handleReset = ()=>{ 
@@ -42,7 +42,8 @@ class App extends Component {
   render(){
     return (
       <React.Fragment> 
-        <Navigation />
+        <Navigation 
+        totalCounters={ this.state.counters.filter(c => c.value > 0).length }/>
         <main className='container'>
           <Counters 
             counters={this.state.counters}
